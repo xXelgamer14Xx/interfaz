@@ -76,7 +76,7 @@ echo " "
 
 sleep 3
 
-sudo apt install python || sudo pip3 install python-nmap keyboard pyautogui  || sudo pip install python-nmap keyboard pyautogui 
+sudo apt install python || sudo apt install python3 || sudo pip3 install python-nmap keyboard pyautogui reflex  || sudo pip install python-nmap keyboard pyautogui reflex
 
 echo ".............instalacion completa...................."
 
