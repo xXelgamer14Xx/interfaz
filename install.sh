@@ -19,7 +19,9 @@ echo "  "
 echo "coloca tu nombre de usuario porfavor"
 read -p "usuario: " usuario
 
-cd /home/$usuario/$desk/
+cd /home/$usuario/$desk/interfaz/
+tar -xf polybar.tar.xz  
+
 echo "ya entramos a tu carpeta $desk"
 sleep 2
 
