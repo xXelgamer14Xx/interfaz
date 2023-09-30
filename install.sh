@@ -79,6 +79,8 @@ echo " "
 sleep 3
 
 sudo apt install python || sudo apt install python3 || sudo pip3 install python-nmap keyboard pyautogui reflex  || sudo pip install python-nmap keyboard pyautogui reflex
+pip3 install --upgrade reflex aiohttp async-timeout || pip install --upgrade reflex aiohttp async-timeout
+
 
 echo ".............instalacion completa...................."
 
