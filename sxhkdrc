@@ -136,3 +136,7 @@ shift + super + f
 #putty
 shift + super + p
     putty
+
+#obsidian
+shift + super + n
+	/opt/Obsidian-1.4.5.AppImage
