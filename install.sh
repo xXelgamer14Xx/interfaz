@@ -63,6 +63,10 @@ sudo apt-get install acpi fzf feh zsh git rofi vim nvim xcb curl kitty putty cma
 
 
 sudo dpkg -i /home/$usuario/$desk/interfaz/lsd-musl_0.23.1_amd64.deb
+sudo apt install bat
+
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
