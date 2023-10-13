@@ -133,3 +133,6 @@ alt + super + {Left,Down,Up,Right}
 #firefox
 shift + super + f
 	/opt/firefox/firefox
+#putty
+shift + super + p
+    putty
