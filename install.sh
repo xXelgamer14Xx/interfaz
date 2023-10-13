@@ -19,8 +19,9 @@ echo "  "
 echo "coloca tu nombre de usuario porfavor"
 read -p "usuario: " usuario
 
-cd /home/$usuario/$desk/interfaz/
-tar -xf polybar.tar.xz  
+sudo apt --fix-broken install
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 
 echo "ya entramos a tu carpeta $desk"
 sleep 2
@@ -91,7 +92,7 @@ echo ".........copiamos fondos de pantalla a la carpeta usr/share/backgrounds/wa
 echo "  "
 
 
-cp -r  ~/Desktop/interfaz/walls /usr/share/backgrounds
+cp -r  ~/$desk/interfaz/walls /usr/share/backgrounds
 
 feh --bg-fill  /usr/share/backgrounds/walls/wallpaperflare.com_wallpaper\ \(4\).jpg
 sudo echo 'source feh --bg-fill  /usr/share/backgrounds/walls/wallpaperflare.com_wallpaper\ \(4\).jpg' >>~/.config/bspwm/bspwmrc
@@ -170,7 +171,6 @@ echo ""
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 sudo echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
-
 mkdir ~/.config/bspwm/scripts/
 
 sudo cp -r  ~/$desk/interfaz/  ~/.config/bspwm/scripts/
@@ -232,5 +232,18 @@ mkdir -p ~/.config/rofi/themes
 cp -r ~/Descargas/blue-sky/nord.rasi ~/.config/rofi/themes
 
 echo "................terminando la configuracion................."
+
+cd ~/$desk/interfaz
+tar -xf firefox-118.0.2.tar.bz2
+sudo mv -r ~/$desk/interfaz/firefox /opt/
+
+sudo mv  ~/$desk/interfaz/Obsidian-1.4.5.AppImage /opt/
+
+sudo dpkg --configure -a
+sudo dpkg --install CiscoPacketTracer_821_Ubuntu_64bit.deb
+sudo apt-get install dialog
+sudo apt-get install libgl1-mesa-glx
+
+
 
 rofi-theme-selector
