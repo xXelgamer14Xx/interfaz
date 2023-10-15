@@ -264,7 +264,7 @@ cp ~/$desk/ethernet_status.sh .
 
 
 mkdir -p ~/.config/rofi/themes
-cp -r ~/Descargas/blue-sky/nord.rasi ~/.config/rofi/themes
+cp  ~/Descargas/blue-sky/nord.rasi ~/.config/rofi/themes
 
 echo "................terminando la configuracion................."
 
