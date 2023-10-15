@@ -23,26 +23,26 @@ sudo apt --fix-broken install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
-echo "ya entramos a tu carpeta $desk"
+ "ya entramos a tu carpeta $desk"
 sleep 2
 
-echo "      "
+ "      "
 
 
-echo "......................actualisaremos tu sistema..................... "
+ "......................actualisaremos tu sistema..................... "
 sleep 3
 
 sudo apt update && sudo apt upgrade
 
-echo " "
-echo "........................tarea finalizada............................."
+ " "
+ "........................tarea finalizada............................."
 
 sleep 3
 
-echo "  "
-echo ".............instalaremos algunos repositorios nesesarios............ "
-echo "  "
-echo "esto tardardara algo agara una taza de cafe y mientras tanto espera.......gracias.................."
+ "  "
+ ".............instalaremos algunos repositorios nesesarios............ "
+ "  "
+ "esto tardardara algo agara una taza de cafe y mientras tanto espera.......gracias.................."
 
 sleep 3
 
@@ -53,14 +53,14 @@ sudo apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev li
 sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev
 
 
-echo " "
-echo "........................tarea finalizada............................."
-echo " "
+ " "
+ "........................tarea finalizada............................."
+ " "
 
 sleep 2
 
-echo "..........instalaremos algunas herramientas que podras usar.........."
-echo " "
+ "..........instalaremos algunas herramientas que podras usar.........."
+ " "
 
 sleep 3
 
@@ -77,14 +77,14 @@ curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-di
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-echo "......................instalacion completa............................"
-echo " "
+ "......................instalacion completa............................"
+ " "
 
 sleep 3
 
-echo " "
-echo "...................instalaremos unos paquetes de python................"
-echo " "
+ " "
+ "...................instalaremos unos paquetes de python................"
+ " "
 
 sleep 3
 
@@ -92,41 +92,41 @@ sudo apt install python || sudo apt install python3 || sudo pip3 install python-
 pip3 install --upgrade reflex aiohttp async-timeout || pip install --upgrade reflex aiohttp async-timeout
 
 
-echo ".............instalacion completa...................."
+ ".............instalacion completa...................."
 
 sleep 3
 
-echo " "
-echo ".........copiamos fondos de pantalla a la carpeta usr/share/backgrounds/walls......"
-echo "  "
+ " "
+ ".........copiamos fondos de pantalla a la carpeta usr/share/backgrounds/walls......"
+ "  "
 
 
 cp -r  ~/$desk/interfaz/walls /usr/share/backgrounds
 
 feh --bg-fill  /usr/share/backgrounds/walls/wallpaperflare.com_wallpaper\ \(4\).jpg
-sudo echo 'source feh --bg-fill  /usr/share/backgrounds/walls/wallpaperflare.com_wallpaper\ \(4\).jpg' >>~/.config/bspwm/bspwmrc
+sudo  'source feh --bg-fill  /usr/share/backgrounds/walls/wallpaperflare.com_wallpaper\ \(4\).jpg' >>~/.config/bspwm/bspwmrc
 
 
-echo  " "
-echo " .............configuracion exitosa ya se configuro el fondo de pantalla de :).............."
-echo ""
+  " "
+ " .............configuracion exitosa ya se configuro el fondo de pantalla de :).............."
+ ""
 
 sleep 4
 
-echo ".........se instalaran algunos recursos mas.......... "
-echo " "
+ ".........se instalaran algunos recursos mas.......... "
+ " "
 
 sudo apt update && sudo apt upgrade                                                                                                                                   INT ✘   
 sudo apt install libcurl4=7.74.0-1.3+deb11u8
 sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxc b1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen  xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmp dclient-dev libcurl4-openssl-dev libnl-genl-3-dev 
 
-echo " "
-echo  ".............descarga exitosa..................."
+ " "
+  ".............descarga exitosa..................."
 
 sleep  4
 
-echo  ""
-echo ".............se intalaran a continuacion bspwm y sxhkd.................."
+  ""
+ ".............se intalaran a continuacion bspwm y sxhkd.................."
 
 
 cd /home/$usuario/Descargas/
@@ -154,13 +154,13 @@ chmod +x /home/$usuario/.config/bspwm/bspwmrc
 cp -r /home/$usuario/$desk/interfaz/sxhkdrc ~/.config/sxhkd/
 
 
-echo  ".....................configuracion finalizada ..................."
-echo ""
+  ".....................configuracion finalizada ..................."
+ ""
 
 sleep 4
 
-echo ".....................configuraremos la kitty......................"
-echo ""
+ ".....................configuraremos la kitty......................"
+ ""
 sudo apt install kitty
 
 sudo cp -r ~/$desk/interfaz/programas/kitty  ~/.config/ 
@@ -238,9 +238,15 @@ ninja -C build
 sleep 3
 sudo ninja -C build install
 
+ mkdir ~/.config/picom
+ cd ~/.config/picom
+ cp ~/Descargas/blue-sky/picom.conf .
 
+ 
+sudo echo 'bspc config focus_follows_pointer true' >> ~/.config/bspwm/bspwmrc
 sudo echo 'picom --experimental-backends &' >> ~/.config/bspwm/bspwmrc
 sudo echo 'bspc config border_width 0' >> ~/.config/bspwm/bspwmrc
+sudo echo '~/.config/polybar/launch.sh' >> ~/.config/bspwm/bspwmrc   
 
 cd ~/Descargas/
 git clone https://github.com/VaughnValle/blue-sky.git
@@ -251,6 +257,10 @@ cp * -r ~/.config/polybar
 echo ""
 echo ".............configuracion terminada........................."
 echo ""
+
+mkdir ~/.config/bin
+cd ~/.config/bin
+cp ~/$desk/ethernet_status.sh .
 
 
 mkdir -p ~/.config/rofi/themes
