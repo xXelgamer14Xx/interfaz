@@ -260,7 +260,7 @@ echo ""
 
 mkdir ~/.config/bin
 cd ~/.config/bin
-cp ~/$desk/ethernet_status.sh .
+cp ~/$desk/interfaz/ethernet_status.sh .
 
 
 mkdir -p ~/.config/rofi/themes
